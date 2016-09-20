@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eBoutique</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> 
+  <style>
+
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  margin-left: 50px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #990000;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #990000;
+  background-image: #990000;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #990000;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+  </style>
+	
+</head>
+
+<body style="background-color:#FFF4F4;">
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#990000; border:none;">
+<div class="topnav1" style="background-color:#990000; border: 2px solid #fff;border-left:0;  border-right:0 ;  border-top: 0;position:relative;">
+<div class="row" style="height:20px; ">
+<div class="container" >
+<div class="col-sm-2"><a style="color:#ffffff; font-size:12px;"href="" data-toggle="modal" data-target="#trackordermodal" ><span class="glyphicon glyphicon-map-marker"></span><b>&nbsp;&nbsp;Track Order</b></a></div>
+
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a href="" data-toggle="modal" data-target="#sellproductmodal" style="color:#ffffff;font-size:12px;"href=""><span class="glyphicon glyphicon-briefcase"></span><b>&nbsp;&nbsp;Sell Product</b></a></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a  style="color:#ffffff;font-size:12px;"href="ourstores.html"><span class=" glyphicon glyphicon-home"></span><b>&nbsp;&nbsp;Our Stores</b></a></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a  style="color:#ffffff;font-size:12px;"href="247customercare.html"><span class="glyphicon glyphicon-ok-circle"></span><b>&nbsp;&nbsp;24/7 customer care</b></a></div>
+<div class="col-sm-2"><a  style="color:#ffffff;font-size:12px;"href=""><span class="glyphicon glyphicon-save"></span><b>&nbsp;&nbsp;Download the App</b></a></div>
+<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"><a  style="color:#ffffff;font-size:12px;"href="aboutebotique.html"><span class="glyphicon glyphicon-hand-right"></span><b>&nbsp;&nbsp;About Us</b></a></div>
+  <div class="modal fade" id="trackordermodal" role="dialog" style="margin-top:220px;">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Track Order</h4>
+        </div>
+        <div class="modal-body">
+                  <form method="post" action="trackorder.html">
+                <div class="form-group">
+                    <label for="inputOrderTrackingID" style="text-align:right;" class="col-sm-2 control-label">Order id:</label>
+					     <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputOrderTrackingID" value="" placeholder="# put your order id here">
+                   <small class="text-muted">You don't remember Order Id? We Posted you Order Id to your E-mail. </small>
+                   
+				   </div>
+					
+                </div>
+				<br>
+				<br>
+                <div class="form-group"style="padding-top:20px;">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" id="shopGetOrderStatusID"class="btn btn-default"style="background-color:#000000;color:#ffffff;">Track Order</button>
+                    </div>
+                </div>
+        </form>
+		<br>
+				<br>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="sellproductmodal" role="dialog" style="margin-top:120px;">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sell Product</h4>
+        </div>
+        <div class="modal-body">
+      <h3>Want to Sell Products????</h3>
+      <p>Here you have opportunity to sell your products on eBoutique.</p>
+      <p style="text-align:center;"><a href="login1.html">Login /Sign up with Shopkeeper Mode.</a><p>
+
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</nav>
+<nav class="navbar navbar-default navbar-fixed-top" id="main_nav" style="background-color:#990000; border:none; padding-left:50px; margin-top:30px;">
+<div class="topnav2" style="background-color:#990000;border:none;">
+    <div class="row">
+<div class="col-sm-2"> <a class="navbar-brand" id="sitename" style="color:#ffffff;font-size:30px;margin-left:13px; padding-top:25px;"href="index.html">eBoutique</a></div>    
+        <div class="col-sm-8" style="padding-top:20px;">
+		
+		    <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    	<span id="search_concept"><span class="glyphicon glyphicon-filter "></span></span>&nbsp;&nbsp;<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+					  <li><a href="#all">All</a></li>
+					   <li class="divider"></li>
+                      <li><a href="electronics_category.html">Electronics</a></li>
+					   <li class="divider"></li>
+                      <li><a href="#home_products">Home Products</a></li>
+					   <li class="divider"></li>
+                      <li><a href="#food_store">Food Store</a></li>
+					   <li class="divider"></li>
+                      <li><a href="#men_kids">Men & kids</a></li>
+					   <li class="divider"></li>
+					  <li><a href="#women_kids">Women & kids</a></li>
+					   <li class="divider"></li>
+					  <li><a href="#stationary">Stationary</a></li>
+					   <li class="divider"></li>
+					  <li><a href="#automobiles">Automobiles</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">         
+                <input type="text" class="form-control" name="x" placeholder="What's on your mind? put it here....">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" style="background-color:#660000;" type="button"><span class="glyphicon glyphicon-search"style="color:#ffffff;"></span></button>
+					
+			   </span>
+            </div>
+        </div>
+		<div class="col-sm-2" style="padding-top:10px;padding-left:10px;text-align:center;">
+
+		 <a href="shoppingcart.html"  id="cartbutton" class="btn btn-default" style="width:100px;text-align:center;height:50px; background-color:transparent;font-size:15px;color:#ffffff;padding-top:13px;" role="button"><span class="glyphicon glyphicon-shopping-cart"  style="color:#ffffff;"></span><b>&nbsp;&nbsp;Cart&nbsp;<span class="badge">0</span></b></a>
+			
+		
+		</div> 	
+				
+	</div>
+	<script>
+	$(document).ready(function(e){
+    $('.search-panel .dropdown-menu').find('a').click(function(e) {
+		e.preventDefault();
+		var param = $(this).attr("href").replace("#","");
+		var concept = $(this).text();
+		$('.search-panel span#search_concept').text(concept);
+		$('.input-group #search_param').val(param);
+	});
+});
+	</script>
+</div>
+
+
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+
+    <div class="collapse navbar-collapse js-navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown mega-dropdown" style="width:130px;">
+		
+          <a id="titlenav" style="width:130px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Electronics<span class="glyphicon glyphicon-chevron-down pull-right" style="padding-top:4px;"></span></a>
+
+          <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+		 <li class="dropdown mega-dropdown" style="width:150px;">
+		
+          <a id="titlenav" style="width:160px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Home Products <span class="glyphicon glyphicon-chevron-down pull-right"style="padding-top:4px;"></span></a>
+
+             <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+		 <li class="dropdown mega-dropdown" style="width:130px;">
+		
+          <a id="titlenav"  style="width:130px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Food Store<span class="glyphicon glyphicon-chevron-down pull-right"style="padding-top:4px;"></span></a>
+          <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+		 <li class="dropdown mega-dropdown" style="width:130px;">
+		
+          <a id="titlenav" style="width:130px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Men&kids <span class="glyphicon glyphicon-chevron-down pull-right"style="padding-top:4px;"></span></a>
+
+          <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+		<li class="dropdown mega-dropdown" style="width:150px;">
+		
+          <a id="titlenav" style="width:150px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Women&Kids <span class="glyphicon glyphicon-chevron-down pull-right"style="padding-top:4px;"></span></a>
+
+          <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+		 <li class="dropdown mega-dropdown" style="width:130px;">
+		
+          <a id="titlenav" style="width:130px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Stationary <span class="glyphicon glyphicon-chevron-down pull-right"style="padding-top:4px;"></span></a>
+
+          <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+		 <li class="dropdown mega-dropdown" style="width:150px;">
+		
+          <a id="titlenav" style="width:150px;color:#ffffff;"href="#"class="dropdown-toggle" data-toggle="dropdown">Automobiles <span class="glyphicon glyphicon-chevron-down pull-right"style="padding-top:4px;"></span></a>
+
+          <ul class="dropdown-menu mega-dropdown-menu row">
+     
+			  <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobiles</li>
+                <li><a href="#">Huawei Honor&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Moto&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+                <li><a href="#">Mi</a></li>
+                <li><a href="#">Asus</a></li>
+                <li><a href="#">Samsung&nbsp;&nbsp; <span class="label label-danger">New</span></a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Sony</a></li>
+				<li><a href="#">Microsoft</a></li>
+                <li class="divider"></li>
+				<li><a href="#">show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Popular in Mobiles</li>
+                <li><a href="#">Honor 5x &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Moto x Force &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Honor Holly 2 plus &nbsp;&nbsp; <span class="label label-warning">New</span></a></li>
+				<li><a href="#">Huawei Nexus 6p</a></li>
+				<li><a href="#">Le 1s</a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Wearable Devices</li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Smart Bands</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Laptops</li>
+                <li><a href="#">Dell</a></li>
+				<li><a href="#">Hp</a></li>
+				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Laptops  &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				  <li class="dropdown-header">Tablets</li>
+				  <li><a href="#">Apple Tablets</a></li>
+                <li><a href="#">Mi Tablets</a></li>
+				<li><a href="#">Samsung Tablets</a></li>
+				<li class="divider"></li>
+				<li><a href="#">All Tablets &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+                <li class="dropdown-header">Mobile Accessories</li>
+                <li><a href="#">Cases and Covers</a></li>
+                <li><a href="#">Power Banks</a></li>
+				<li><a href="#">On the Go Pendrives</a></li>
+				<li><a href="#">Combos</a></li>
+				<li><a href="#">Mobile Memory Cards</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Tablets Accesories</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				<li class="dropdown-header">Network Components</li>
+                <li><a href="#">Data Cards </a></li>
+                <li><a href="#">Routers</a></li>
+				<li class="divider"></li>
+                <li class="dropdown-header">Headphones & Headsets</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				 <li class="dropdown-header">Automation</li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+				<li class="divider"></li>
+				
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Computer Accessories</li>
+				<li><a href="#">External Hard Disks</a></li>
+				 <li><a href="#">Laptop Skins & Decals</a></li>
+               <li><a href="#">Printers & Inks</a></li>
+				 <li><a href="#">Monitors</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Gaming</li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Large Appliances</li>
+				<li><a href="#">Air Conditioners</a></li>
+                <li><a href="#">Washing Machines</a></li>
+				 <li><a href="#">Refrigerators</a></li>
+				 <li class="divider"></li>
+				<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Televisions</li>
+				<li><a href="#"> VU smart Televisions &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">39 Inches & Above</a></li>
+				 <li><a href="#">32 Inches</a></li>
+				  <li><a href="#">24 inches & Below</a></li>
+				  <li><a href="#">Micromax Televisions</a></li>
+				 <li class="divider"></li>
+					<li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+					<li class="dropdown-header">Small Appliances</li>
+				<li><a href="#"> Air Purifiers &nbsp;&nbsp; <span class="label label-danger">New</span></a></li></a></li>
+				<li><a href="#">Irons </a></li>
+				 <li><a href="#">Vaccum Cleaners</a></li>
+				  <li><a href="#">Geysers</a></li>
+				  <li><a href="#">Emergency Lights</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+           
+              </ul>
+            </li>
+            <li class="col-sm-2">
+              <ul>
+				<li class="dropdown-header">Audio & Video</li>
+				<li><a href="#">Speakers</a></li>
+                <li><a href="#">iPods & mp3 Players</a></li>
+                <li class="divider"></li>
+           		<li class="dropdown-header">Kitchen Appliances</li>
+				<li><a href="#">Microwave Ovens</a></li>
+                <li><a href="#">Water Purifiers</a></li>
+				 <li><a href="#">Mixer/Grinders</a></li>
+               <li><a href="#">Boilers</a></li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Cameras</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+				<li class="dropdown-header">Camera Accessories</li>
+				 <li class="divider"></li>
+           <li><a href="#">Show All &nbsp;&nbsp;<i class="fa fa-chevron-right fa-lg "></i></a></li>
+                <li class="divider"></li>
+              </ul>
+            </li>
+          </ul>
+
+        </li>
+<li  style="width:140px;background-color:#ff0000;"><a href="offerndeals.html"  style="color:#ffffff;"><span class="glyphicon glyphicon-fire" style="color:#ffffff;"></span> Offers/Deals</a></li>
+   <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle"  id="loginbutton"  style="margin-left:42px;margin-top:10px; background-color:transparent;width:100px;color:#ffffff;font-size:15px;" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-user" ></span><b>&nbsp;&nbsp;Login</b>&nbsp;&nbsp;<span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="login1.html">Login</a></li>
+      <li><a href="Sign-up1.html">Register</a></li>
+    </ul>
+  </div>    
+	 </ul>
+	<ul class="nav navbar-nav navbar-right">    
+	</ul>
+    </div>
+    <!-- /.nav-collapse -->
+  </nav>
+
+ <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse --> <!-- /.nav-collapse -->
+
+   <div style="border-bottom:2px solid #000000;margin-top:160px; margin-bottom:15px;">
+     <h3 style="color:#990000;text-align:center;  "><b>24/7 Customer Care</b></h3>
+   </div>   
+   <h3><span style="border-bottom:2px solid #000000;margin-left:50px;"><b>Frequently Asked Questions</b></span></h3>
+  <div class="row"  style="margin-bottom:50px;">
+        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 bhoechie-tab-container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  <i class="glyphicon glyphicon-credit-card"style="font-size:30px;"></i><br/>Payment
+                </a>
+                <a href="#" class="list-group-item text-center">
+                     <i class="fa fa-truck" style="font-size:30px;"></i><br/>Order
+                </a>
+                <a href="#" class="list-group-item text-center">
+                     <i class="fa fa-shopping-cart" style="font-size:30px;"></i><br>
+                        Shopping
+
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <i class="fa fa-exchange" style="font-size:30px;"></i><br>Returns or Exchange
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <i class="glyphicon glyphicon-tasks" style="font-size:30px;"></i><br/>Other
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+                    <center>
+  <div class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Should I call the customer care number once the product is delivered for its installation? </a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">I haven't received the invoice for my order. </a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Wear jeans or chinos?</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Have a Margarita or Pina Colada? </a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Drink a glass of Guinness or Fat Tire? </a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Crash with friends or stay in a hotel?</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Vacation in Hawaii or Alaska, and why? </a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">Visit Europe or Mexico?</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">Go skiing or snowshoeing? </a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+                    </center>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+                    <center>
+                    <div class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">Go to a play or musical?</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">Hike or bike?</a>
+        </h4>
+      </div>
+      <div id="collapse12" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">Read on a Kindle or paperback book? This question is a starter for many possible conversations on reading, favorite books, technology, libraries, bookstores, and more. </a>
+        </h4>
+      </div>
+      <div id="collapse13" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">Travel by plane, train, or automobile?</a>
+        </h4>
+      </div>
+      <div id="collapse14" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">Enjoy a houseboat or speed boat? </a>
+        </h4>
+      </div>
+      <div id="collapse15" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">Go climbing or zip lining? </a>
+        </h4>
+      </div>
+      <div id="collapse16" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">Go to a comedy club or dance club?</a>
+        </h4>
+      </div>
+      <div id="collapse17" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse18">Have a night out or evening in?</a>
+        </h4>
+      </div>
+      <div id="collapse18" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse19">Watch TV or read a book? </a>
+        </h4>
+      </div>
+      <div id="collapse19" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse20">Go canoeing or waterskiing?</a>
+        </h4>
+      </div>
+      <div id="collapse20" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+                    </center>
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content">
+                    <center>
+  <div class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse21">Camp in an RV or stay in a tent?</a>
+        </h4>
+      </div>
+      <div id="collapse21" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse22">Use Facebook or Twitter? </a>
+        </h4>
+      </div>
+      <div id="collapse222" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse23">Choose a free trip or money? This may tell you whether the person values experiences over dollars. </a>
+        </h4>
+      </div>
+      <div id="collapse23" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse24">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse24" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse25">Watch sports or play sports?</a>
+        </h4>
+      </div>
+      <div id="collapse25" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse26">Play dodgeball or kickball? </a>
+        </h4>
+      </div>
+      <div id="collapse26" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse27">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse27" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse28">Who would you want with you if you were stranded on a deserted island? </a>
+        </h4>
+      </div>
+      <div id="collapse28" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse29">Who would you want with you if you were stranded on a deserted island?</a>
+        </h4>
+      </div>
+      <div id="collapse29" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse30">I haven't received the invoice for my order. </a>
+        </h4>
+      </div>
+      <div id="collapse30" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+                    </center>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <center>
+  <div class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse31">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse31" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse32">If money was no object, what would you do all day? </a>
+        </h4>
+      </div>
+      <div id="collapse32" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse33">I haven't received the invoice for my order. </a>
+        </h4>
+      </div>
+      <div id="collapse33" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse34">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse34" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse35">If you could do anything you wanted right now, what would it be? </a>
+        </h4>
+      </div>
+      <div id="collapse35" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse36">Who is your favorite author? </a>
+        </h4>
+      </div>
+      <div id="collapse36" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse37">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse37" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse38">Should I call the customer care number once the product is delivered for its installation? </a>
+        </h4>
+      </div>
+      <div id="collapse38" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse39">I haven't received the invoice for my order. </a>
+        </h4>
+      </div>
+      <div id="collapse39" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse40">University or life experience, which do you feel best prepares you for life?</a>
+        </h4>
+      </div>
+      <div id="collapse40" class="panel-collapse collapse">
+        <div class="panel-body">aaaaa Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+                    </center>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <center>
+  <div class="panel-group" id="accordion" >
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse41">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse41" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse42">Should I call the customer care number once the product is delivered for its installation? </a>
+        </h4>
+      </div>
+      <div id="collapse42" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse43">What is your biggest success up until now? </a>
+        </h4>
+      </div>
+      <div id="collapse43" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse44">How can I Return Or Exchange Items?</a>
+        </h4>
+      </div>
+      <div id="collapse44" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse45">Should I call the customer care number once the product is delivered for its installation? </a>
+        </h4>
+      </div>
+      <div id="collapse45" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse46">I haven't received the invoice for my order. </a>
+        </h4>
+      </div>
+      <div id="collapse46" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse47">What is the one thing that should be taught in school that isn’t already?</a>
+        </h4>
+      </div>
+      <div id="collapse47" class="panel-collapse collapse ">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse48">Should I call the customer care number once the product is delivered for its installation? </a>
+        </h4>
+      </div>
+      <div id="collapse48" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse49">I haven't received the invoice for my order. </a>
+        </h4>
+      </div>
+      <div id="collapse49" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+        <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:#990000;color:#ffffff;">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse50">How would your friends describe you? </a>
+        </h4>
+      </div>
+      <div id="collapse50" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+                    </center>
+                </div>
+            </div>
+        </div>
+  </div>
+<div class="container" style="margin-bottom:20px;">
+<h3><b><span style="border-bottom:2px solid #000000;">Do You Have Any Questions?</span></b></h3>
+
+
+<form role="form">
+    <div class="form-group">
+      <label for="comment">Questions:</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+  
+  <footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Lorem Ipsum </h3>
+                    <ul>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                        <li> <a href="#"> Lorem Ipsum </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Special Deals </h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+              
+                                <button class="btn  bg-black" style="margin-top:10px;" type="button"> Get Notified <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © eBoutique. All right reserved. Powered By Ashish </p>
+            <div class="pull-right">
+      <ul class="nav nav-pills payments">           
+      <li><i class="fa fa-cc-visa"></i></li>
+      <li><i class="fa fa-cc-mastercard"></i></li>
+      <li><i class="fa fa-cc-amex"></i></li>
+      <li><i class="fa fa-cc-paypal"></i></li>
+      </ul> 
+            </div>
+      </div>
+      </div>
+      <!--/.footer-bottom--> 
+      </footer>
+</body>
+</html>

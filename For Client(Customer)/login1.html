@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eBotique Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+ <style>
+ #submitform{
+ background-color:transparent;border:2px solid #ffffff;color:#ffffff;
+ }
+ #submitform:hover{
+ background-color:transparent;border:2px solid #66ff66;color:#ffffff;
+  box-shadow: 0 0 3px #FF0000, 0 0 5px #66ff66;
+ } 
+ #resetform{
+ background-color:transparent;border:2px solid #ffffff;color:#ffffff;
+ }
+ #resetform:hover{
+ background-color:transparent;border:2px solid #ff4d4d;color:#ffffff;
+  box-shadow: 0 0 3px #FF0000, 0 0 5px #ff4d4d;
+ }
+ #signuppage{ 
+ background-color:transparent;border:2px solid #ffffff;color:#ffffff;
+ }
+ #signuppage:hover{
+ background-color:transparent;border:2px solid #66ffff;color:#ffffff;
+ box-shadow: 0 0 3px #FF0000, 0 0 5px #66ffff;
+}
+ 
+ </style>
+
+ </head>
+  <body style="overflow:hidden;background-color:#fff4f4;">
+  <div class="container" style="width:50%; padding-top:10px;" >
+  <h1 style="text-align:center;color:#ffffff; text-shadow: 2px 2px 4px #000000; background-color:#990000">eBotique</h1>
+  <h2 style="text-align:center; color:#ffffff;padding-bottom:0px;text-shadow: 2px 2px 4px #000000;"><b>LOG IN</b> </h2>
+  <div class="jumbotron" style="border:3px solid #000000;background-color:rgba(0,0,0,0.5); box-shadow: 10px 10px 5px black; color:#ffffff;">
+<form method="post" action="" enctype="multipart/form-data">
+  <fieldset class="form-group">
+    <label for="EmailTitle">Email address</label>
+    <input type="email" values=""  name="email" class="form-control" id="email" required placeholder="Enter Your email">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="PasswordTitle">Password</label>
+    <input type="password" values=""  name="password"  id="password" required class="form-control" placeholder="Password">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="logincategory">Login As</label>
+    <select class="form-control" name = "member">
+		<option value="none">------</option>
+    	<option value="Admin">Admin</option>
+		<option value="Owner">Shopkeeper</option>
+		<option value="Customer">Customer</option>
+    </select>
+  </fieldset>
+   <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" name="submit" class="btn btn-default" id="submitform"><b>Submit</b></button>
+    <button type="reset" name="Cancel" class="btn btn-default"id="resetform"><b>cancel</b></button>		
+</form>
+<p style="text-align:center;font-size:15px; text-shadow: 2px 2px 4px #000000;">New to eBotique</p>
+<a href="Sign-up1.html" class="btn btn-default btn-block" id="signuppage" role="button">Sign Up</a>
+ <div class="container">
+  By signing in you are agreeing to our <a href="termsconditions.html">Conditions of Use and Sale</a> and our <a href="privacypolicy.html">Privacy Notice</a>
+  </div>
+</div>
+</div>
+</body>
+</html>

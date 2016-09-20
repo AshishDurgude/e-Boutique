@@ -1,0 +1,26 @@
+.productbox {
+    background-color:#ffffff;
+	padding:10px;
+	margin-bottom:10px;
+	-webkit-box-shadow: 10px 10px 5px grey;
+	   -moz-box-shadow:10px 10px 5px grey;
+	box-shadow: 10px 10px 5px grey;
+}
+.col-sm-2 .img-responsive:hover{
+			border:2px solid #990000;
+}
+.producttitle {
+    font-weight:bold;
+	padding:5px 0 5px 0;
+}
+
+.productprice {
+	border-top:1px solid #dadada;
+	padding-top:5px;
+}
+
+.pricetext {
+	font-weight:bold;
+	font-size:1.4em;
+}
+.pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}

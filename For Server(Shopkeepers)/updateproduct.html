@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>eBotique</title>
+
+    <!-- Bootstrap Core -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="inboxsentmail.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+.fileinput-button {
+    float: left;
+    margin-right: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.fileinput-button input {
+    cursor: pointer;
+    direction: ltr;
+    font-size: 23px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-300px, 0px) scale(4);
+}	
+
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{margin-top:20px;
+}
+</style>
+</head>
+
+<body style=" background:url('background1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#990000;color:#ffffff; border:none;	" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"style="color:#ffffff;font-size:20px;">eBotique</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+
+						
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="inbox.html">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>Aaaaaaa...kash Kadam</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>dnfjknsdkn  f sd ffdfl ksd fkd s</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="inbox.html">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>Sanket Pandya</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>sdfghj  scjfyjfjsf jsfjs jbh</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-preview">
+                            <a href="inbox.html">
+                                <div class="media">
+                                    <span class="pull-left">
+                                        <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                    </span>
+                                    <div class="media-body">
+                                        <h5 class="media-heading"><strong>Ashwini Khandu</strong>
+                                        </h5>
+                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                        <p>jay Amravati</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="inbox.html">Read All New Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="taskpanel.html">Deadpool <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="taskpanel.html">Maastizade <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="taskpanel.html">Tidin tidin <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="taskpanel.html">AbuDabu <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                     
+                     
+                        <li class="divider"></li>
+                        <li>
+                            <a href="taskpanel.html">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Ashish Durgude <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                           <a href="" data-toggle="modal" data-target="#shopprofilemodal"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                             <a href="shopprofile.html"><i class="fa fa-fw fa-gear"></i> Edit Profile</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" style="background-color:#990000;">	
+                    <li class="active" >
+                        <a href="index.html" style="background-color:#990000;color:#ffffff;" ><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+				
+					<li>
+                        <a href="inbox.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-inbox"></i>&nbsp;Inbox</a>
+                    </li>
+					<li>
+                        <a href="" data-toggle="modal" data-target="#composemodal" style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-inbox"></i>&nbsp;Compose</a>
+                    </li>
+					<li>
+                        <a href="sentmail.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-inbox"></i>&nbsp;Sent Mail</a>
+                    </li>
+				<li>
+                        <a href="javascript:;" style="background-color:#000000;color:#ffffff;" data-toggle="collapse" data-target="#product_menu"><i class="fa fa-fw fa-arrows-v"></i> Product  <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="product_menu" class="collapse">
+                            <li>
+                                 <a href="allproduct.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;All Products</a>
+                            </li>
+					<li>
+                        <a href="newproduct.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;New Product</a>
+                    </li>
+                    <li>
+                        <a href="deleteproduct.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;Delete Product</a>
+                    </li>
+					<li>
+                        <a href="updateproduct.html"style="background-color:#000000;color:#ffffff;"><i class="fa fa-fw fa-wrench"></i>&nbsp;Update Product</a>
+                    </li>
+                        </ul>
+                </li>
+			  <li>
+                        <a href="javascript:;" style="background-color:#990000;color:#ffffff;" data-toggle="collapse" data-target="#order_menu"><i class="fa fa-fw fa-desktop"></i>&nbsp;My Orders <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="order_menu" class="collapse">
+
+                    <li>
+                        <a href="orderhistory.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;Order History</a>
+                    </li>
+                        </ul>
+                </li>
+					 <li>
+                        <a href="taskpanel.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-desktop"></i>&nbsp;Task panel</a>
+                    </li>
+                     <li>
+		<a href="" data-toggle="modal" data-target="#howtousemodal" style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-inbox"></i>&nbsp;How to use</a>
+                                         
+					 </li>
+                 <li>
+                        <a href="contactusshop.html"style="background-color:#990000;color:#ffffff;"><i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                           <span  style="text-shadow: 2px 2px 4px #000000;color:#ffffff;"> <b>Update Product</b></span> 
+                        </h1>
+                       
+                    </div>
+                </div>
+				
+				
+				
+				
+				
+				
+				<!--....................................AAKASH KADAM SPECIAL........................................  -->
+				
+				
+				
+				
+				
+				
+				
+			<div class="row">
+                    <div class="col-lg-12">
+					
+					<h3> Want to Update Product?</h3>
+					<a href="#" class="btn btn-default" role="button">Click Here</a>
+<!-- AAkash Type here................................ new product form php and database-->
+                    </div>
+                </div>
+
+
+				
+				
+				
+				
+				
+				<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  AAKASH KADAM SPECIAL END HERE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  -->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div class="container">
+
+  <!-- Trigger the modal with a button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="composemodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Compose</h4>
+        </div>
+		
+<div class="modal-body">
+      <form role="form" class="form-horizontal" action="sentmail.html">
+        <div class="form-group">
+           <label class="col-lg-2 control-label">To</label>
+              <div class="col-lg-10">
+              <input type="text" placeholder="" id="inputEmail1" class="form-control">
+              </div>
+        </div>
+     <div class="form-group">
+                                                  <label class="col-lg-2 control-label">Cc / Bcc</label>
+                                                  <div class="col-lg-10">
+                                                      <input type="text" placeholder="" id="cc" class="form-control">
+                                                  </div>
+                                              </div>
+                                              <div class="form-group">
+                                                  <label class="col-lg-2 control-label">Subject</label>
+                                                  <div class="col-lg-10">
+                                                      <input type="text" placeholder="" id="inputPassword1" class="form-control">
+                                                  </div>
+                                              </div>
+                                              <div class="form-group">
+                                                  <label class="col-lg-2 control-label">Message</label>
+                                                  <div class="col-lg-10">
+                                                      <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                                                  </div>
+                                              </div>
+		`					<div class="modal-footer">       
+                                              <div class="form-group">
+                                                  <div class="col-lg-offset-2 col-lg-10">
+                                                      <span class="btn fileinput-button">
+                                                        <i class="fa fa-paperclip" style="font-size:20px;"></i>
+                                                        <span>Attach Files</span>
+                                                        <input type="file" name="files[]" multiple="">
+                                                      </span>
+                                                      <button class="btn btn-send" type="submit">Send</button>
+													    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                  </div>
+                                              </div>
+                                          </form>
+                                      </div>
+									   </div>
+   
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="modal fade" id="viewmail1modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+	
+	  <div class="modal fade" id="viewmail2modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+	
+	  <div class="modal fade" id="viewmail3modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+	  <div class="modal fade" id="viewmail4modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+	  <div class="modal fade" id="viewmail5modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+	  <div class="modal fade" id="viewmail6modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+	  <div class="modal fade" id="viewmail7modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+		
+<div class="modal-body">
+ 
+	<div class="row">
+
+		<div class="col-lg-12">
+			<section class="panel panel-default mail-container">
+			         <button type="button" style="padding-right:10px;padding-top:10px;" class="close" data-dismiss="modal">&times;</button>
+				<div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span>  PRODUCT RATE</strong></div>
+				<div class="panel-body">
+                
+                    <div class="mail-header row">
+						<div class="col-md-4 col-md-offset-8">
+							<div class="pull-right">
+								<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default"data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-print"></i></a>
+								<a href="javascript:;" class="btn btn-sm btn-default"><i class="fa fa-trash-o"></i></a>
+							</div>
+						</div>
+					</div>
+                
+					<div class="mail-header row">
+						<div class="col-md-12">
+							<h3>How to include an image in production description</h3>
+						</div>
+					</div>
+                    
+					<div class="mail-info">
+						<div class="row">
+							<div class="col-md-12">
+                                <ul class="list-unstyled list-inline">
+                                    <li><i class="fa fa-calendar-o"></i>16/02/2016</li>
+                                    <li><i class="fa fa-user"></i>Ashish Durgude</li>
+                                    <li><i class="glyphicon glyphicon-bookmark"></i><a href="http://localhost:8080/Utilities/xmlKnowledgeBase23/index.asp?displayCategory=yes&id=Gateway">Gateway</a></li>
+                                    <li><i class="fa fa-star"></i>33 views </li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+                    
+					<div class="mail-content">
+						<p>Quo, animi, reprehenderit, dolorem obcaecati reiciendis quasi accusamus totam alias sapiente sint tempore quam adipisci temporibus unde odit eveniet eum molestias! Esse, hic ut maxime animi et! Dolores, cum libero pariatur facere nesciunt tempore. Expedita, vel, ut illo magni quis suscipit nisi deserunt enim eaque veniam.</p>
+						<blockquote>Ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, error, nulla, quia, neque est animi necessitatibus qui vero beatae quae ut laudantium facere consequuntur maiores cupiditate amet vitae magni nihil!<small>Ashish Durgude</small></blockquote>
+						<p>Officiis, tempore, unde, sint in ut neque alias ad est ex fugit odio nobis nemo dolorem aperiam labore ipsam sapiente optio nostrum perferendis ab. Molestias, </p>
+						<p>sit, dolorem consequuntur vel quibusdam illum veniam veritatis vitae blanditiis officiis ducimus voluptatibus omnis cum quae tempore porro reiciendis animi dignissimos optio rem laborum eius magnam. Esse, accusantium quia deleniti fugiat commodi architecto itaque nulla in. Consequatur beatae non explicabo in qui aspernatur deleniti quas doloribus!</p>
+						<p>Aperiam, veniam, quae temporibus ratione suscipit accusantium provident amet deserunt natus veritatis ipsa error accusamus saepe debitis quisquam labore facilis magnam impedit minus explicabo quidem dicta ipsam nam velit quasi esse ad culpa sequi dolorum eaque. Iste exercitationem facilis nemo aut quae! Sit?</p>
+					</div>
+					<div class="mail-attachments">
+						<p><i class="fa fa-paperclip"></i> 2 attachements | <a href="javascript:;">Download all attachements</a></p>
+						<ul class="list-unstyled">
+							<li>iniformation.pdf</a></li>
+							<li>drivername.ini</a></li>
+						</ul>
+					</div>
+					<div class="mail-actions">
+                    
+						<a href="" data-toggle="modal" data-target="#composemodal" class="btn btn-sm btn-default" data-toggle="tooltip" data-placement="right" title="To Reply Click this Button And Close Current modal">Reply <i class="fa fa-mail-reply"></i></a>
+					
+                    	<ul class="list-unstyled list-inline">
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+							<li><a href="#"><span class="label label-default">Technology</span></a></li>
+						</ul>
+                    
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+ </div>
+ </div>
+   
+      </div>
+    </div>
+		<div class="modal fade" id="howtousemodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"style="text-align:center;">How to Use eBotique Shopkeeper Mode</h4>
+        </div>
+        <div class="modal-body">
+          <p>here are some points..</p>
+		  <ul>
+		  <li>Abdbxfcghjlkjlk</li>
+		  <li>Btfghjlkkjhjghfgfh</li>
+		  <li>C,l,ouygtfrtgyhuji</li>
+		  </ul>
+		  <p style="text-align:center;">Or</p>
+		  <p>Watch Video:<a href="https://www.youtube.com/watch?v=vezRf-_Q8dk">How to Use eBotique Shopkeeper Mode</a> </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <div class="modal fade" id="shopprofilemodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content"style="background-color:transparent; shadow:none;">
+        <div class="modal-body" >
+          <div class="panel panel-info ">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ashish Durgude</h3>
+			 
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="ashish1.jpg" class="img-circle img-responsive"> </div>
+               
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Department:</td>
+                        <td>Shopkeeper</td>
+                      </tr>
+                      <tr>
+                        <td>Date of Birth</td>
+                        <td>03/29/1995</td>
+                      </tr>
+                   
+                      <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                      </tr>
+                         <tr>
+                             <tr>
+                        <td>Shop Address</td>
+                        <td>Metro,pune</td>
+                      </tr>
+                        <tr>
+                        <td>Home Address</td>
+                        <td>Metro,mumbai</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:abc@xyz.com">abc@xyz.com</a></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td>123-4567-890(Landline)<br><br>555-4567-890(Mobile)
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                  <a href="allproduct.html" class="btn btn-default"style="border:2px solid #990000;">My Products</a>
+                  <a href="orderhistory.html" class="btn btn-default"style="border:2px solid #990000;">My Orders</a>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+				 <a href="inbox.html" style="border:2px solid #000000;" class="btn btn-default"><i class="glyphicon glyphicon-envelope"></i> </a>
+                       <span class="pull-right">
+						<a href="shopprofile.html" style="border:2px solid #000000;" class="btn btn-default"> <i class="glyphicon glyphicon-edit"></i> Edit Profile</a>
+                            <button type="button" style="border:2px solid #000000;" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </span>
+                    </div>
+            
+          </div>
+       
+      
+   
+        </div>
+ 
+      </div>
+      
+    </div>
+  </div>
+  </div>				
+				
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+<nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#990000;color:#ffffff;height:5px;" role="navigation">
+<p style="font-size:12px; padding-top:20px; text-align:center;"> Copyright.. EgrowthIndia</p>
+</nav>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

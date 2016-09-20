@@ -1,0 +1,47 @@
+
+
+p {
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.articles {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.article {
+  color: #222;
+  background: rgba(255,255,255,.9);
+  border-spacing: 2px;
+  border-color: gray;
+  font-family: arial,sans-serif;
+  border-bottom: 1px #e5e5e5 solid;
+}
+
+.item {
+  cursor: pointer;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+}
+
+.item .source {
+  margin-left: 20px;
+}	
+
+.item .title {
+  font-weight: bold;
+}
+
+.item .pubdate {
+  margin-right: 0px;
+  text-align: right; 
+}
+
+
+
+

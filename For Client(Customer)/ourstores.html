@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>eBotique</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/main.css">
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"> 
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+    
+
+</head>
+
+<body style="background-color:#FFF4F4;">
+
+			 <nav class="navbar navbar-default" style="background-color:#990000;color:#ffffff;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <ul class="nav navbar-nav" style="">
+        <li><a href="index.html" style="color:#ffffff;" >Back to Home</a></li>
+        <li class="active "><a href="#">Stores</a></li>
+     
+      </ul>
+      <a class="navbar-brand " href="index.html" style="margin-left:150px;color:#ffffff;font-size:30px;">eBotique</a>
+    </div>
+
+  </div>
+</nav>
+<!-- ***************************************************************
+******************************************
+**************************************************************
+-->
+  
+
+
+
+    
+    <div class="map-wrapper">
+        <div id="map-canvas"></div>
+        <div id="map-tooltip"></div>
+    </div>
+    
+
+        <section class="content eshop">
+        <div class="container">
+            <div class="stores">
+                
+                <div class="row">
+                    <div class="col-sm-7">
+					
+                        <h2>Let's check our Stores</h2>
+						
+                    </div>
+                    <div class="col-sm-5">
+					
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="change-region">Select Area:</label>
+								
+                                <select class="form-control"style= "width:500px; " id="change-region">
+								
+                                   <option value="1" selected>PICT College,Pune</option>	
+                                    <option value="2">New York</option>
+                                    <option value="3">Berlin</option>
+                                    <option value="4">Paris</option>
+								
+                                </select>
+								
+                            </div>
+                        </form>
+					
+                    </div>
+                </div>
+                    
+                <div id="test"></div>    
+                            
+                <div class="tabs" id="tabs-regions">
+                    <ul class="nav nav-tabs hidden" role="tablist">
+                        <li role="presentation" class="active"><a href="#region-1" role="tab" data-toggle="tab" aria-controls="region-1" aria-expanded="false">Prague</a></li>
+                        <li role="presentation" class=""><a href="#region-2" role="tab" data-toggle="tab" aria-controls="region-2" aria-expanded="true">New York</a></li>
+                        <li role="presentation" class=""><a href="#region-3" role="tab" data-toggle="tab" aria-controls="region-3" aria-expanded="true">Berlin</a></li>
+                        <li role="presentation" class=""><a href="#region-4" role="tab" data-toggle="tab" aria-controls="region-4" aria-expanded="true">Paris</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active in" id="region-1">
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-1">
+                            <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-1.jpg" class="img-responsive" alt="">
+                                       
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>Tulsiganga Snacks,Near PICT College,Pune</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                            <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Ashish Durgude(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>ashish@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                           
+                                        </div>
+                                </div>
+                              </div>
+                                
+                            </div>
+                            <!-- STORE - END -->
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-2">
+                            <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-2.jpg" class="img-responsive" alt="">
+                                        
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>Vijay Book Centre,Near PICT,pune</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                           <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Aakash Kadam(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>aakash@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+                                
+                            </div>
+                            <!-- STORE - END -->
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-3">
+                            <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-3.jpg" class="img-responsive" alt="">
+                                        
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>Shree Balaji Copiers Tours & Travels,Near PICT,pune</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                            <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Sanket Pandya(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>pandya@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+                                
+                            </div>
+                            <!-- STORE - END -->
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="region-2">
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-4">
+                            <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-4.jpg" class="img-responsive" alt="">
+
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>63 Crosby St, New York, NY 10012</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                                <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Ashwini Khandelwal(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>khandu@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+                                
+                            </div>
+                            <!-- STORE - END -->
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="region-3">
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-5">
+                            <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-5.jpg" class="img-responsive" alt="">
+
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>Bebelpl. 1, 10117 Berlin</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                            
+                                                  <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Madhura Kathi(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>vetachikathi@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+                                
+                            </div>
+                            <!-- STORE - END -->
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-6">
+                                 <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-1.jpg" class="img-responsive" alt="">
+
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>Jablonskistraße 16, 10405 Berlin</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                                  <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>kiran misal(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>misalpav@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- STORE - END -->
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-7">
+                       <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-2.jpg" class="img-responsive" alt="">
+
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>Rigaer Str. 9, 10247 Berlin</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                                 <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Leena Deore(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>deonare@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- STORE - END -->
+                            
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="region-4">
+                            
+                            <!-- STORE - START -->
+                            <div class="default-style store row row-no-padding" id="marker-8">
+                                                            <div class="col-sm-5">
+                                  <div class="store-image">
+                                    <img src="assets/images/store-3.jpg" class="img-responsive" alt="">
+
+                                    </div>
+                                </div>
+                          <div class="col-sm-7">
+                                <div class="store-body">
+                                  <h3>18 Rue Antin, 75002 Paris</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat mauris eget magna egestas porta. Curabitur sagittis sagittis neque rutrum congue.</p>
+                                        <div class="row">
+                                                 <ul class="list-unstyled col-sm-12">
+                                                <li><i class="fa fa-user"></i> <b>Shahrukh Khan(Owner)</b></li>
+												<br>
+                                                <li><i class="fa fa-envelope"></i> <b>srk@eBotique.com</b></li>
+												<br>
+                                                <li><i class="fa fa-phone"></i> <b>+123 234 345 567</b></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <!-- STORE - END -->
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+  <!-- ***************************************************************
+******************************************
+**************************************************************
+-->  <!-- ***************************************************************
+******************************************
+**************************************************************
+-->  <!-- ***************************************************************
+******************************************
+**************************************************************
+-->
+
+
+
+
+
+ 
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © eBotique. All right reserved. Powered By Ashish </p>
+            <div class="pull-right">
+      <ul class="nav nav-pills payments">           
+      <li><i class="fa fa-cc-visa"></i></li>
+      <li><i class="fa fa-cc-mastercard"></i></li>
+      <li><i class="fa fa-cc-amex"></i></li>
+      <li><i class="fa fa-cc-paypal"></i></li>
+      </ul> 
+            </div>
+      </div>
+      </div>
+    
+
+
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true"></script>   
+    <script src="assets/js/jquery.dragtable.js"></script>
+    <script src="assets/js/jquery.card.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/twitterFetcher_min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
